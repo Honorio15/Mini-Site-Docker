@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mini Site Docker – Introdução</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#4B0082"/>
+  <style>
+    html,body {margin:0;padding:0; box-sizing:border-box; background: #f5f3fa;}
+    body {font-family: 'Inter', Arial, sans-serif; color: #2e1a47; min-height:100vh;}
+    .container {max-width: 970px; margin: 0 auto; padding: 0 20px 64px 260px; min-height:100vh;}
+    header {
+      background:linear-gradient(90deg,#4B0082 80%,#9B59B6 100%);
+      color: #fff;
+      padding: 40px 0 18px 220px;
+      margin-bottom:35px;
+      position:relative;
+      border-radius: 0 0 34px 0;
+      box-shadow: 0 3px 40px #c6b1e788;
+    }
+    .logo-title {
+      font-size: 2.1em; font-weight: 800; letter-spacing: .5px;
+      margin-bottom: 8px; display:flex;align-items:center;gap:10px;
+    }
+    .logo-title svg {filter: drop-shadow(0 2px 8px #21295221);}
+    .subtitle {
+      font-weight:400;font-size:1.21em;line-height:1.36;
+      color:#f2e9f9; letter-spacing:.02em;
+    }
+    nav.sidenav {
+      position:fixed;left:0;top:0;min-height:100vh;width:190px;background:#ede7f6;
+      border-right:1.5px solid #d1c4e9;box-shadow:1px 0 0 #e0d7f5;
+      display:flex;flex-direction:column;gap:10px;padding:66px 0 0 0;z-index:100;
+    }
+    nav.sidenav a {
+      display:block;padding:11px 24px;color:#4B0082;font-weight:600;
+      text-decoration:none;border-left:3px solid transparent;transition:.2s;
+      font-size:1.08em;border-radius:0 15px 15px 0;
+      margin-left:0;
+    }
+    nav.sidenav a.active, nav.sidenav a:hover {background:#e1d5f9;border-left:3px solid #9B59B6;}
+    .section {
+      padding: 36px 35px 23px 35px; margin-bottom:32px;background:#fff; border-radius:16px; box-shadow:0 4px 36px #e0d9f54d;
+    }
+    .section h2 { margin-top:0; margin-bottom:14px; font-size:1.33em; color:#4B0082;display:flex;align-items:center;gap:8px;}
+    .section ul, .section ol {margin-left:1.8em;}
+    .creditos {text-align:center;color:#7a5a9b;margin:62px 0 19px 0;}
+    @media(max-width:1024px){
+      .container {padding-left:0;}
+      header {padding-left:0;}
+      nav.sidenav {display:none;}
+    }
+    @media(max-width:650px){
+      .container {padding:0 2vw 6vw 0;}
+      .section {padding:24px 5vw;}
+      .logo-title {font-size:1.2em;}
+    }
+  </style>
+</head>
+<body>
+<nav class="sidenav">
+  
+  <a href="conceitos.html">Conceitos</a>
+  <a href="vantagens.html">Vantagens</a>
+  <a href="relatorio-actions.html">Relatório</a>
+</nav>
+<header>
+  <div class="logo-title">
+    <svg fill="#fff" height="35" viewBox="0 0 24 24" width="35"><path d="M3 13v-2h18v2zm2-6h4v4h-4zm0 8h4v4h-4zm8-8h6v4h-6zm0 8h6v4h-6z"/></svg>
+    Docker • Introdução
+  </div>
+  <div class="subtitle">
+    Uma visão geral sobre conteinerização e o papel do Docker na tecnologia moderna
+  </div>
+</header>
+<div class="container">
+
+  <div class="section">
+    <h2>📌 Introdução ao Docker</h2>
+    <p style="font-size:1.1em;line-height:1.6">
+      O Docker é uma plataforma que revolucionou a forma como desenvolvedores e empresas lidam com aplicações.
+      Ele permite empacotar software em <b>containers</b>, que são ambientes isolados e padronizados,
+      garantindo que o sistema funcione da mesma maneira em qualquer computador ou servidor.
+    </p>
+    <p style="font-size:1.1em;line-height:1.6">
+      Antes do Docker, era comum enfrentar problemas de compatibilidade entre sistemas operacionais,
+      versões de bibliotecas ou configurações de ambiente. A famosa frase <i>"na minha máquina funciona"</i>
+      se tornou um meme na área de TI justamente por esses desafios.
+    </p>
+    <p style="font-size:1.1em;line-height:1.6">
+      Com o Docker, esses obstáculos foram drasticamente reduzidos. Hoje, é possível criar ambientes
+      portáteis e confiáveis em questão de segundos, acelerando o desenvolvimento de software e aumentando
+      a confiabilidade de sistemas em produção.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🌍 Impacto na Indústria</h2>
+    <p style="font-size:1.1em;line-height:1.6">
+      Desde seu lançamento em 2013, o Docker se tornou rapidamente uma das tecnologias mais populares no mundo do desenvolvimento.
+      Empresas de todos os portes adotaram containers para simplificar a distribuição de aplicações,
+      melhorar a escalabilidade e otimizar recursos de infraestrutura.
+    </p>
+    <p style="font-size:1.1em;line-height:1.6">
+      Hoje, o Docker é utilizado em conjunto com orquestradores como o <b>Kubernetes</b>, potencializando ainda mais
+      sua importância em ambientes de <b>cloud computing</b> e <b>DevOps</b>.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>📖 Estrutura do Trabalho</h2>
+    <p style="font-size:1.1em;line-height:1.6">
+      Este mini site está dividido em três partes principais:
+    </p>
+    <ul>
+      <li><b>Início:</b> contextualização e introdução ao Docker;</li>
+      <li><b>Conceitos:</b> explicação sobre o que é Docker e como funciona;</li>
+      <li><b>Vantagens:</b> principais motivos para adotar Docker em projetos reais.</li>
+    </ul>
+  </div>
+
+  <div class="creditos">
+    Trabalho sobre Docker • 2025
+  </div>
+</div>
+</body>
+</html>

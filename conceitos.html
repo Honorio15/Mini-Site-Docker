@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Conceitos de Docker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    html,body {margin:0;padding:0; box-sizing:border-box; background: #f5f3fa;}
+    body {font-family: 'Inter', Arial, sans-serif; color: #2e1a47; min-height:100vh;}
+    .container {max-width: 970px; margin: 0 auto; padding: 0 20px 64px 260px; min-height:100vh;}
+    header {
+      background:linear-gradient(90deg,#4B0082 80%,#9B59B6 100%);
+      color: #fff;
+      padding: 40px 0 18px 220px;
+      margin-bottom:35px;
+      position:relative;
+      border-radius: 0 0 34px 0;
+      box-shadow: 0 3px 40px #c6b1e788;
+    }
+    .logo-title { font-size: 2.1em; font-weight: 800; margin-bottom: 8px; display:flex;align-items:center;gap:10px; }
+    .subtitle { font-weight:400;font-size:1.21em;line-height:1.36; color:#f2e9f9;}
+    nav.sidenav {
+      position:fixed;left:0;top:0;min-height:100vh;width:190px;background:#ede7f6;
+      border-right:1.5px solid #d1c4e9;box-shadow:1px 0 0 #e0d7f5;
+      display:flex;flex-direction:column;gap:10px;padding:66px 0 0 0;z-index:100;
+    }
+    nav.sidenav a { display:block;padding:11px 24px;color:#4B0082;font-weight:600; text-decoration:none;border-left:3px solid transparent;transition:.2s; font-size:1.08em;border-radius:0 15px 15px 0; }
+    nav.sidenav a.active, nav.sidenav a:hover {background:#e1d5f9;border-left:3px solid #9B59B6;}
+    .section { background:#fff; border-radius:16px; padding:36px; margin-bottom:32px; box-shadow:0 4px 36px #e0d9f54d;}
+    .section h2 { color:#4B0082; margin-top:0; }
+    .badge { background:#4B0082;color:#fff;padding:3px 14px;border-radius:12px; }
+    .importante { border-left:7px solid #4B0082; background:#e9dff9; }
+    .dica { border-left:7px solid #41b73f; background:#edfbe7; }
+    .exemplo { border-left:7px solid #ffb700; background:#fff8ed; }
+    .yaml-sample { background:#f5e9ff;border-left:4px solid #9B59B6;padding:10px 18px;margin:10px 0 15px 0;}
+    .checklist li { background:#f1e9fb; border-radius:8px; padding:9px 16px; }
+    .checklist input[type=checkbox] { accent-color:#9B59B6; }
+    .creditos {text-align:center;color:#7a5a9b;margin:62px 0 19px 0;}
+  </style>
+
+</head>
+<body>
+  <nav class="sidenav">
+    <a href="index.html">Início</a>
+    <a href="vantagens.html">Vantagens</a>
+    <a href="relatorio-actions.html">Relatório</a>
+  </nav>
+
+  <header>
+    <div class="logo-title">
+      <svg fill="#fff" height="35" viewBox="0 0 24 24" width="35"><path d="M3 13v-2h18v2zm2-6h4v4h-4zm0 8h4v4h-4zm8-8h6v4h-6zm0 8h6v4h-6z"/></svg>
+      O que é Docker?
+    </div>
+    <div class="subtitle">
+      Entenda o conceito e funcionamento da conteinerização
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>🐳 Conceito</h2>
+      <p>Docker é uma plataforma que permite criar, gerenciar e executar aplicações dentro de <b>containers</b>.
+      Esses containers funcionam como ambientes isolados, que incluem tudo o que a aplicação precisa para rodar:
+      código, bibliotecas e dependências.</p>
+    </div>
+
+    <div class="section">
+      <h2>⚙️ Como funciona</h2>
+      <p>Com o Docker, em vez de instalar manualmente cada dependência no sistema operacional,
+      você descreve tudo em um arquivo chamado <code>Dockerfile</code>. A partir dele, o Docker constrói
+      uma imagem que pode ser executada em qualquer lugar.</p>
+    </div>
+
+    <div class="creditos">
+      Página de Conceitos • Mini Site Docker
+    </div>
+  </div>
+</body>
+</html>

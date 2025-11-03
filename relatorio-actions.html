@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Relatório do Build Automático – GitHub Actions</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {font-family: 'Inter', Arial, sans-serif; background: #f5f3fa; color: #2e1a47; margin:0; padding:40px;}
+    .container {max-width: 970px; margin: 0 auto;}
+    .relatorio {background: #fff; border-radius: 14px; box-shadow: 0 2px 16px #d0e4fb40; padding: 32px; margin-bottom:32px;}
+    h2 {color: #4B0082;}
+    h3 {color: #9B59B6;}
+    pre {background: #f5e9ff; color: #2e1a47; padding: 10px; border-radius: 7px; overflow-x:auto;}
+    .status {font-size:1.09em; margin-bottom:18px;}
+    .tentativas {margin-top:18px;}
+    ul {margin-left:1.5em;}
+    .erro {color: #b52e23;}
+    .sucesso {color: #218c4b;}
+    
+    nav.sidenav {
+      position:fixed; left:0; top:0; min-height:100vh; width:190px; background:#ede7f6;
+      border-right:1.5px solid #d1c4e9; box-shadow:1px 0 0 #e0d7f5;
+      display:flex; flex-direction:column; gap:10px; padding:66px 0 0 0; z-index:100;
+    }
+    nav.sidenav a {
+      display:block; padding:11px 24px; color:#4B0082; font-weight:600;
+      text-decoration:none; border-left:3px solid transparent; transition:.2s;
+      font-size:1.08em; border-radius:0 15px 15px 0;
+      margin-left:0;
+    }
+    nav.sidenav a.active, nav.sidenav a:hover {background:#e1d5f9; border-left:3px solid #9B59B6;}
+    
+    @media(max-width:1024px){
+      .container {padding-left:0;}
+      nav.sidenav {display:none;}
+    }
+    @media(max-width:650px){
+      .container {padding:0 2vw 6vw 0;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="sidenav">
+  <a href="index.html">Início</a>
+  <a href="conceitos.html">Conceitos</a>
+  <a href="vantagens.html" class="active">Vantagens</a>
+</nav>
+
+<div class="container">
+  <div class="relatorio">
+    <h2>Relatório do Build Automático (GitHub Actions)</h2>
+    <p class="status"><b>Status:</b> <span class="sucesso">Sucesso</span></p>
+
+    <h3>Log Principal:</h3>
+    <pre>
+[+] Building 7.4s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile 0.1s
+ => => transferring dockerfile: 102B
+ => [internal] load .dockerignore 0.0s
+ => [internal] load metadata for docker.io/library/nginx:alpine 1.0s
+ => [1/2] FROM docker.io/library/nginx:alpine 0.8s
+ => [2/2] COPY *.html /usr/share/nginx/html/ 0.2s
+ => exporting to image 0.3s
+ => => writing image sha256:abc123...
+ => => naming to docker.io/library/mini-site
+    </pre>
+
+    <div class="tentativas">
+      <h3>Resumo das tentativas de correção:</h3>
+      <ul>
+        <li>Commit 1: Criado o Dockerfile inicial.</li>
+        <li>Commit 2: Ajustado caminho dos arquivos HTML.</li>
+        <li>Commit 3: Build concluído com sucesso.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="creditos" style="text-align:center;color:#7a5a9b;margin-top:40px;">
+    Trabalho acadêmico sobre Docker • 2025
+  </div>
+</div>
+
+</body>
+</html>
